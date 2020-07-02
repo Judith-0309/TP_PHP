@@ -6,6 +6,7 @@ function getConnexion()
     $dbname='activite_bancaire';
     $user='root';
     $mdp='';
+    
     try{
         $conn = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $mdp);
         return $conn;

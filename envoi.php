@@ -18,6 +18,7 @@ function getConnexion()
 }
 if(isset($_POST) && !empty($_POST)){
     
+    
     try{
         
         //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -29,7 +30,7 @@ if(isset($_POST) && !empty($_POST)){
         $_POST["email"], $_POST["telephone"],$_POST["raison_sociale"]));
        
         if($result){
-            echo 'entreprise ajoutee';
+            echo 'compte ouvert';
             var_dump($_POST);
         }
 }

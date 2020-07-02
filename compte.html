@@ -16,7 +16,8 @@
     <nav>
 
         <img src="img/bplogo.png" alt="logo BP" class="img">
-        <h1>BANQUE DU PEUPLE</h1>
+
+            <h1>BANQUE DU PEUPLE</h1>
 
         <ul>
             <li><a href="">Accueil</a></li>
@@ -26,19 +27,19 @@
             <li><a href="">Virement</a></li>
         </ul>
     </nav>
-    <main class="container">
-        <form action="send.php" method="POST">
-            <fieldset class="contain"><br/>
+   
+        <form action="EnvoiCompte.php" method="POST" id="myformCompte">
+            <fieldset class="container"><br/>
                 <legend id="open">Gestion Compte</legend>
 
 
                 <label for="Type_Compte">Type_Compte*</label>
-                <select name="typeCompte" id="compte">
-                    <option value="Selectionnez">Selectionnez*</option>
-                    <option value="">Epargne Simple et Xewal</option>
-                    <option value="">Courant</option>
-                    <option value="">bloqué</option>
-                </select><br/>
+                    <select name="typeCompte" id="compte">
+                        <option value="Selectionnez" id="">Selectionnez*</option>
+                        <option value="Epargne Simple et Xewel" id="Epargne Simple et Xewel">Epargne Simple et Xewel</option>
+                        <option value="Courant" id="Courant">Courant</option>
+                        <option value="bloque" id="bloque">bloqué</option>
+                    </select><br/>
 
                 <label for="Numero_Compte">Numero_Compte*</label>
                 <input id="Numero_Compte" name="Numero_Compte" type="number"/><br/>
@@ -47,12 +48,12 @@
                 <input id="Cle_Rib" name="Cle_Rib" type="number"/><br><br/>
 
                 <label for="Etat_Compte">Etat_Compte*</label>
-                <select name="Etat_Compte" id="Etat_Compte">
-                    <option value="Selectionnez">Selectionnez*</option>
-                    <option value="actif">Actif</option>
-                    <option value="ferme">Ferme</option>
-                    <option value="bloque">bloqué</option>
-                </select><br/>
+                    <select name="Etat_Compte" id="Etat_Compte">
+                        <option value="Selectionnez">Selectionnez*</option>
+                        <option value="Actif" id="Actif">Actif</option>
+                        <option value="Ferme" id="Ferme">Ferme</option>
+                        <option value="bloque" id="bloque">bloqué</option>
+                    </select><br/>
 
                 <label for="Depot initial">Depot initial*</label>
                 <input id="Depot_initial" name="Depot_initial" type="text"/><br/>
@@ -64,13 +65,13 @@
                 <input id="Date_ouverture" name="Date_ouverture" type="date"/><br/>
 
             </fieldset>
-        </form>
-    </main>
-    <div class="button"><br />
-        <input type="submit" value="ENVOYER" onclick="return validate()"/><br/>
-        <input type="reset" value="ANNULER"/><br/>
+       
+            <div class="button"><br />
+                <input type="submit" value="ENVOYER" onclick="return validate()"/><br/>
+                <input type="reset" value="ANNULER"/>
 
-    </div><br/>
+            </div><br/>
+        </form>
 
 
     <script src="mainCompte.js"></script>
